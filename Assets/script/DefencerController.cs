@@ -6,6 +6,7 @@ public class DefencerController : MonoBehaviour
 {
     public List<GameObject> zombies;
     public GameObject axe;
+    public int health;
     public int damage;
     public bool in_attacak;
 
@@ -37,4 +38,19 @@ public class DefencerController : MonoBehaviour
         GameObject axe_inst = Instantiate(axe, transform);
         axe_inst.GetComponent<Axe>().damage = damage;
     }
+
+    public void GetDamage(int received_damage)
+    {
+        if (health - received_damage > 0)
+        {
+            health -= received_damage;
+            return;
+        }
+        Die();
+    }
+    private void Die()
+    {
+        Destroy(this.gameObject);
+    }
+
 }

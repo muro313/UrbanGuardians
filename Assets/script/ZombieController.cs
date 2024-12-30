@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,6 +9,9 @@ public class ZombieController : MonoBehaviour
     public float speed;
 
     private bool is_stopped;
+
+
+    public float attack_step;
 
     private void Update()
     {
@@ -20,6 +24,20 @@ public class ZombieController : MonoBehaviour
         if (collision.gameObject.layer != 8) // stop only when we see object
             return;
         is_stopped = true;
+        StartCoroutine(Attack(collision));
+    }
+
+    IEnumerator Attack(Collider2D collision)
+    {
+        if(collision == null)
+        {
+            is_stopped = false;
+        } else
+        {
+            collision.gameObject.GetComponent<DefencerController>().GetDamage(damage);
+            yield return new WaitForSeconds(attack_step);
+            StartCoroutine(Attack(collision));
+        }
     }
 
     private void MoveToLeft()

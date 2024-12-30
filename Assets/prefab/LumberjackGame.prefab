@@ -137,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombies: []
   axe: {fileID: 1163692506383087320, guid: a218ab1a5bdfd9a48847c9b58f9707a8, type: 3}
+  health: 5
   damage: 100
   in_attacak: 0
   attack_step: 4
