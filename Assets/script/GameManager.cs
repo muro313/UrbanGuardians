@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     {
         if (dragging_lumber != null && current_cell != null)
         {
-            Instantiate(dragging_lumber.GetComponent<LumberDragging>().card.lumb_game, current_cell.transform);
+            GameObject defencer_inst = Instantiate(dragging_lumber.GetComponent<LumberDragging>().card.lumb_game, current_cell.transform);
+            defencer_inst.GetComponent<DefencerController>().zombies = current_cell.GetComponent<Cell>().spawn_point.zombies;
             current_cell.GetComponent<Cell>().is_empty = false;
         }    
     }

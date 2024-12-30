@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3831336062971938767
+--- !u!1 &1163692506383087320
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,28 +8,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 698124882365171530}
-  - component: {fileID: 6800874417193829187}
-  - component: {fileID: 9132805584836931648}
-  - component: {fileID: -3036476243024136578}
-  - component: {fileID: 2644188577976928217}
-  m_Layer: 8
-  m_Name: LumberjackGame
+  - component: {fileID: 1237050628210238773}
+  - component: {fileID: 6701393589742900536}
+  - component: {fileID: 2796663734726405048}
+  - component: {fileID: 3226331936467154488}
+  - component: {fileID: 4928679212281625818}
+  - component: {fileID: 7192546755950636233}
+  m_Layer: 10
+  m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &698124882365171530
+--- !u!224 &1237050628210238773
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3831336062971938767}
+  m_GameObject: {fileID: 1163692506383087320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.12853006, y: 0.12853006, z: 0.12853006}
+  m_LocalScale: {x: 2.245189, y: 2.245189, z: 2.245189}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -37,23 +38,23 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1024, y: 1024}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6800874417193829187
+--- !u!222 &6701393589742900536
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3831336062971938767}
+  m_GameObject: {fileID: 1163692506383087320}
   m_CullTransparentMesh: 1
---- !u!114 &9132805584836931648
+--- !u!114 &2796663734726405048
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3831336062971938767}
+  m_GameObject: {fileID: 1163692506383087320}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 858249123931055644, guid: 33a820f745328e64b91b435fd1594b79, type: 3}
+  m_Sprite: {fileID: -5825250732961213246, guid: a36186b2aa313424e8cfdb3bffdd1a6e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -77,13 +78,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!61 &-3036476243024136578
+--- !u!61 &3226331936467154488
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3831336062971938767}
+  m_GameObject: {fileID: 1163692506383087320}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -121,22 +122,45 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 600, y: 300}
+  m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &2644188577976928217
+--- !u!50 &4928679212281625818
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163692506383087320}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &7192546755950636233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3831336062971938767}
+  m_GameObject: {fileID: 1163692506383087320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 670ace8edc5923b4693ae259bbd89c9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e8cd1aa5982a4b489e9f8eb30835bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombies: []
-  axe: {fileID: 1163692506383087320, guid: a218ab1a5bdfd9a48847c9b58f9707a8, type: 3}
-  damage: 100
-  in_attacak: 0
-  attack_step: 4
+  speed: 1.5

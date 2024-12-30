@@ -19,6 +19,7 @@ public class ZombiesSpawner: MonoBehaviour
                 continue;
 
             GameObject zombie_inst = Instantiate(zombie, transform.GetChild(meta.row_number).transform);
+            transform.GetChild(meta.row_number).GetComponent<SpawnPoint>().zombies.Add(zombie_inst);
             meta.is_spawn = true;
 
         }

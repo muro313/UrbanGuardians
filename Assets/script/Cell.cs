@@ -6,6 +6,7 @@ public class Cell : MonoBehaviour
     public bool is_empty;
     public GameManager manager;
     public Image backroung_image;
+    public SpawnPoint spawn_point;
 
     private void Start()
     {

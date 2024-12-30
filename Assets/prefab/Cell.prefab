@@ -138,3 +138,4 @@ MonoBehaviour:
   is_empty: 0
   manager: {fileID: 0}
   backroung_image: {fileID: 173658355944004223}
+  spawn_point: {fileID: 0}
